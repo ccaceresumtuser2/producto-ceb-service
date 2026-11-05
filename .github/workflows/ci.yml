@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Pruebas (Java 21 + H2)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    # No necesita PostgreSQL: las pruebas usan H2 en memoria
+    # (ver src/test/resources/application.yml).
+
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Dar permiso de ejecución al wrapper de Maven
+        run: chmod +x mvnw
+
+      - name: Ejecutar pruebas
+        run: ./mvnw -B test
+
+      - name: Publicar reportes de pruebas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reportes-surefire
+          path: target/surefire-reports/
+          if-no-files-found: ignore

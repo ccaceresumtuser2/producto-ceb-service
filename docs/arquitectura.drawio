@@ -1,0 +1,190 @@
+<mxfile host="Electron" agent="Claude Code">
+  <diagram id="arquitectura-cebolla" name="Arquitectura cebolla">
+    <mxGraphModel dx="1704" dy="1013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" parent="1" style="text;html=1;fontSize=22;align=center;verticalAlign=middle;" value="&lt;b style=&quot;color: rgb(0, 0, 0); background-color: rgb(236, 236, 236);&quot;&gt;app-productos&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: rgb(236, 236, 236); float: none; display: inline !important;&quot;&gt;&amp;nbsp;&lt;/span&gt;&amp;nbsp;· Arquitectura cebolla (Onion Architecture)" vertex="1">
+          <mxGeometry height="40" width="900" x="150" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitulo" parent="1" style="text;html=1;fontSize=13;fontStyle=2;align=center;verticalAlign=middle;fontColor=#555555;" value="Las dependencias siempre apuntan hacia el centro: una capa solo conoce a las que están más adentro" vertex="1">
+          <mxGeometry height="30" width="900" x="150" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ringInfra" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#F0EDE6;strokeColor=#8A8A8A;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="1040" width="1040" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ringApp" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E0F2EA;strokeColor=#2E7D57;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="720" width="720" x="240" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ringDomSrv" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ECEBFB;strokeColor=#6B63C9;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="500" width="500" x="350" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ringModel" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#DCDAF7;strokeColor=#4B44A8;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="270" width="270" x="465" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="tInfra" parent="1" style="text;html=1;fontSize=16;align=center;verticalAlign=middle;fontColor=#3A3A3A;" value="&lt;b&gt;Infraestructura&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px&quot;&gt;&lt;i&gt;infrastructure/ · Spring, HTTP, JPA, PostgreSQL&lt;/i&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="400" x="400" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tApp" parent="1" style="text;html=1;fontSize=15;align=center;verticalAlign=middle;fontColor=#1E5A3E;" value="&lt;b&gt;Servicios de aplicación&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px&quot;&gt;&lt;i&gt;application/&lt;/i&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="260" x="470" y="282" as="geometry" />
+        </mxCell>
+        <mxCell id="tDomSrv" parent="1" style="text;html=1;fontSize=15;align=center;verticalAlign=middle;fontColor=#3D3690;" value="&lt;b&gt;Servicios de dominio&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px&quot;&gt;&lt;i&gt;domain/services/&lt;/i&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="240" x="480" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="tModel" parent="1" style="text;html=1;fontSize=15;align=center;verticalAlign=middle;fontColor=#2E2880;" value="&lt;b&gt;Modelo de dominio&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px&quot;&gt;&lt;i&gt;domain/model/ · domain/exception/&lt;/i&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="220" x="490" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="producto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontSize=12;fontColor=#ffffff;" value="&lt;b&gt;Producto&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:9px&quot;&gt;datos + reglas de negocio&lt;/span&gt;" vertex="1">
+          <mxGeometry height="38" width="140" x="530" y="568" as="geometry" />
+        </mxCell>
+        <mxCell id="categoria" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontSize=11;fontColor=#ffffff;" value="&lt;b&gt;Categoria&lt;/b&gt; (enum)" vertex="1">
+          <mxGeometry height="26" width="140" x="530" y="614" as="geometry" />
+        </mxCell>
+        <mxCell id="excepciones" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontSize=9;dashed=1;fontColor=#ffffff;" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;PrecioInvalidoException&lt;br&gt;ProductoNoEncontradoException&lt;/font&gt;" vertex="1">
+          <mxGeometry height="36" width="170" x="515" y="648" as="geometry" />
+        </mxCell>
+        <mxCell id="irepo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontSize=11;strokeWidth=1.5;fontColor=#ffffff;" value="&lt;b&gt;&amp;laquo;interface&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b&gt;IProductoRepository&lt;/b&gt;" vertex="1">
+          <mxGeometry height="42" width="160" x="520" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="crear" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;" value="&lt;span style=&quot;font-size:8px&quot;&gt;&amp;laquo;interface&amp;raquo;&lt;/span&gt;&lt;br&gt;&lt;b&gt;ICrearProducto&lt;/b&gt;&lt;hr style=&quot;margin:2px 0;border:0;border-top:1px solid #2E7D57&quot;&gt;CrearProducto" vertex="1">
+          <mxGeometry height="56" width="130" x="465" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="obtener" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D57;fontSize=10;" value="&lt;span style=&quot;font-size:8px&quot;&gt;&amp;laquo;interface&amp;raquo;&lt;/span&gt;&lt;br&gt;&lt;b&gt;IObtenerProducto&lt;/b&gt;&lt;hr style=&quot;margin:2px 0;border:0;border-top:1px solid #2E7D57&quot;&gt;ObtenerProducto" vertex="1">
+          <mxGeometry height="56" width="130" x="605" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="cambiar" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D57;fontSize=10;" value="&lt;span style=&quot;font-size:8px&quot;&gt;&amp;laquo;interface&amp;raquo;&lt;/span&gt;&lt;br&gt;&lt;b&gt;ICambiarPrecioProducto&lt;/b&gt;&lt;hr style=&quot;margin:2px 0;border:0;border-top:1px solid #2E7D57&quot;&gt;CambiarPrecioProducto" vertex="1">
+          <mxGeometry height="56" width="130" x="465" y="896" as="geometry" />
+        </mxCell>
+        <mxCell id="eliminar" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E7D57;fontSize=10;" value="&lt;span style=&quot;font-size:8px&quot;&gt;&amp;laquo;interface&amp;raquo;&lt;/span&gt;&lt;br&gt;&lt;b&gt;IEliminarProducto&lt;/b&gt;&lt;hr style=&quot;margin:2px 0;border:0;border-top:1px solid #2E7D57&quot;&gt;EliminarProducto" vertex="1">
+          <mxGeometry height="56" width="130" x="605" y="896" as="geometry" />
+        </mxCell>
+        <mxCell id="command" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontSize=9;dashed=1;fontColor=#ffffff;" value="CrearProducto&lt;br&gt;Command" vertex="1">
+          <mxGeometry height="40" width="92" x="250" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="notaApp" parent="1" style="text;html=1;fontSize=9;fontStyle=2;align=center;verticalAlign=middle;fontColor=#1E5A3E;" value="buscar →&lt;br&gt;aplicar regla →&lt;br&gt;guardar" vertex="1">
+          <mxGeometry height="44" width="92" x="858" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="web" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontSize=10;align=center;fontColor=#ffffff;" value="&lt;b&gt;web/&lt;/b&gt;&lt;br&gt;ProductoController&lt;br&gt;GlobalExceptionHandler&lt;br&gt;dto/ · doc/" vertex="1">
+          <mxGeometry height="80" width="130" x="100" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="persistence" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontSize=10;align=center;fontColor=#ffffff;" value="&lt;b&gt;persistence/&lt;/b&gt;&lt;br&gt;ProductoRepositoryJpa&lt;br&gt;ProductoEntity&lt;br&gt;ProductoJpaRepository&lt;br&gt;ProductoMapper" vertex="1">
+          <mxGeometry height="90" width="130" x="970" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="config" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A8A8A;fontSize=10;" value="&lt;b&gt;config/&lt;/b&gt;&lt;br&gt;BeanConfig · OpenApiConfig" vertex="1">
+          <mxGeometry height="44" width="170" x="515" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="cliente" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=11;" value="Cliente HTTP&lt;br&gt;&lt;span style=&quot;font-size:9px&quot;&gt;Swagger / curl&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="20" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="postgres" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="PostgreSQL&lt;br&gt;&lt;span style=&quot;font-size:9px&quot;&gt;topicos_db&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="80" x="1130" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="eCentro" edge="1" parent="1" source="ALTgvzkjd193zP6-mhU--2" style="endArrow=classic;html=1;strokeColor=#2D7600;strokeWidth=7.5;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;fillColor=#60a917;" target="tModel" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1123" y="340.5" as="sourcePoint" />
+            <mxPoint x="713" y="340.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCliente" edge="1" parent="1" source="cliente" style="endArrow=classic;html=1;strokeColor=#6c8ebf;fontSize=9;exitX=0.5;exitY=0.5;entryX=0.3;entryY=0;" target="web" value="HTTP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eUsa" edge="1" parent="1" source="web" style="endArrow=open;endSize=10;html=1;strokeColor=#2E7D57;fontSize=9;dashed=0;exitX=1;exitY=0;entryX=0;entryY=0.5;curved=1;" target="crear" value="usa ICrearProducto&lt;br&gt;(y las demás I*Producto)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eAppRepo" edge="1" parent="1" source="cambiar" style="endArrow=open;endSize=10;html=1;strokeColor=#6B63C9;fontSize=9;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="irepo" value="depende de">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eImplementa" edge="1" parent="1" source="persistence" style="endArrow=block;endFill=0;endSize=12;dashed=1;html=1;strokeColor=#6B63C9;fontSize=9;exitX=0.5;exitY=1;entryX=1;entryY=0.5;curved=1;" target="irepo" value="implementa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eRepoModel" edge="1" parent="1" source="irepo" style="endArrow=open;endSize=10;html=1;strokeColor=#4B44A8;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="excepciones" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="776" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDb" edge="1" parent="1" source="persistence" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#6c8ebf;fontSize=9;exitX=0.7;exitY=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" target="postgres" value="JPA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="leyendaCapas" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;fillColor=#FFFFFF;strokeColor=#BBBBBB;verticalAlign=top;align=left;spacing=12;" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;b style=&quot;font-size:14px&quot;&gt;Capas&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;table style=&quot;font-size:11px;border-collapse:collapse&quot; cellpadding=&quot;3&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Anillo&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Contiene&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Depende de&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Modelo de dominio&lt;/td&gt;&lt;td&gt;Entidades y reglas de negocio&lt;/td&gt;&lt;td&gt;Nadie&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Servicios de dominio&lt;/td&gt;&lt;td&gt;Contratos que necesita el dominio&lt;/td&gt;&lt;td&gt;Modelo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Servicios de aplicación&lt;/td&gt;&lt;td&gt;Casos de uso: coordinan cada acción&lt;/td&gt;&lt;td&gt;Dominio&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Infraestructura&lt;/td&gt;&lt;td&gt;HTTP, JPA, Swagger, Spring&lt;/td&gt;&lt;td&gt;Todas las internas&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px&quot;&gt;&lt;b&gt;domain&lt;/b&gt; y &lt;b&gt;application&lt;/b&gt; son Java puro: sin anotaciones de Spring.&lt;br&gt;&lt;b&gt;ProductoController&lt;/b&gt; depende de las interfaces &lt;b&gt;I*Producto&lt;/b&gt;,&lt;br&gt;nunca de las clases concretas.&lt;br&gt;&lt;b&gt;BeanConfig&lt;/b&gt; es el único que conoce las clases concretas: crea cada&lt;br&gt;servicio, le inyecta &lt;b&gt;ProductoRepositoryJpa&lt;/b&gt; como &lt;b&gt;IProductoRepository&lt;/b&gt;&lt;br&gt;y lo registra con el tipo de su interfaz.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="320" width="440" x="1240" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="leyendaFlujo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;fillColor=#FFFFFF;strokeColor=#BBBBBB;verticalAlign=top;align=left;spacing=12;" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;b style=&quot;font-size:14px&quot;&gt;Flujo: PATCH /api/productos/1/precio&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px&quot;&gt;1. &lt;b&gt;ProductoController&lt;/b&gt; &lt;i&gt;(infraestructura)&lt;/i&gt; recibe la petición&lt;br&gt;2. llama a &lt;b&gt;ICambiarPrecioProducto&lt;/b&gt; &lt;i&gt;(aplicación)&lt;/i&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;→ la implementa &lt;b&gt;CambiarPrecioProducto&lt;/b&gt;&lt;br&gt;3. &lt;b&gt;IProductoRepository.buscarPorId&lt;/b&gt; &lt;i&gt;(servicios de dominio)&lt;/i&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;→ lo resuelve &lt;b&gt;ProductoRepositoryJpa&lt;/b&gt; contra PostgreSQL&lt;br&gt;4. &lt;b&gt;producto.cambiarPrecio(...)&lt;/b&gt; &lt;i&gt;(modelo)&lt;/i&gt; aplica la regla&lt;br&gt;5. &lt;b&gt;IProductoRepository.guardar&lt;/b&gt; persiste el cambio&lt;br&gt;6. el controlador responde &lt;b&gt;RespuestaApi&lt;/b&gt; { message, timestamp, data, status }&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="440" x="1240" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="leyendaFlechas" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;fillColor=#FFFFFF;strokeColor=#BBBBBB;verticalAlign=top;align=left;spacing=12;" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;b style=&quot;font-size:14px&quot;&gt;Flechas&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px&quot;&gt;──▷ &amp;nbsp;usa / depende de (siempre hacia adentro)&lt;br&gt;- - -▷ &amp;nbsp;implementa una interfaz&lt;br&gt;[ «interface» IXxx | Xxx ] &amp;nbsp;interfaz arriba, implementación abajo&lt;br&gt;◁──▷ &amp;nbsp;comunicación con sistemas externos&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="440" x="1240" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="leyendaComparacion" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;fillColor=#FFFFFF;strokeColor=#BBBBBB;verticalAlign=top;align=left;spacing=12;" value="&lt;div style=&quot;text-align:left&quot;&gt;&lt;b style=&quot;font-size:14px&quot;&gt;Hexagonal → Cebolla&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;table style=&quot;font-size:10px;border-collapse:collapse&quot; cellpadding=&quot;2&quot;&gt;&lt;tr&gt;&lt;td&gt;core/model, core/exception&lt;/td&gt;&lt;td&gt;→ domain/model, domain/exception&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;core/ports/out (3 PortOut)&lt;/td&gt;&lt;td&gt;→ domain/services/IProductoRepository&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;core/ports/in (PortIn)&lt;/td&gt;&lt;td&gt;→ application/I*Producto&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;core/usecase&lt;/td&gt;&lt;td&gt;→ application&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;adapters/in/web&lt;/td&gt;&lt;td&gt;→ infrastructure/web&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;adapters/out/persistence&lt;/td&gt;&lt;td&gt;→ infrastructure/persistence&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;config&lt;/td&gt;&lt;td&gt;→ infrastructure/config&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="440" x="1240" y="805" as="geometry" />
+        </mxCell>
+        <mxCell id="ALTgvzkjd193zP6-mhU--2" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="1030" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="eUsaObtener" edge="1" parent="1" source="web" style="endArrow=open;endSize=10;html=1;rounded=1;strokeColor=#2E7D57;fontSize=9;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="obtener" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="430" />
+              <mxPoint x="450" y="305" />
+              <mxPoint x="670" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eUsaCambiar" edge="1" parent="1" source="web" style="endArrow=open;endSize=10;html=1;rounded=1;strokeColor=#2E7D57;fontSize=9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="cambiar" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="880" />
+              <mxPoint x="440" y="911" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eUsaEliminar" edge="1" parent="1" source="web" style="endArrow=open;endSize=10;html=1;rounded=1;strokeColor=#2E7D57;fontSize=9;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="eliminar" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="900" />
+              <mxPoint x="440" y="975" />
+              <mxPoint x="700" y="975" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eComando" edge="1" parent="1" source="web" style="endArrow=open;endSize=10;html=1;rounded=1;strokeColor=#2E7D57;fontSize=9;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="command" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eCrearRepo" edge="1" parent="1" source="crear" style="endArrow=open;endSize=10;html=1;rounded=1;strokeColor=#6B63C9;fontSize=9;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="irepo" value="depende de">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="500" />
+              <mxPoint x="410" y="821" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eObtenerRepo" edge="1" parent="1" source="obtener" style="endArrow=open;endSize=10;html=1;rounded=1;strokeColor=#6B63C9;fontSize=9;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" target="irepo" value="depende de">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="500" />
+              <mxPoint x="770" y="780" />
+              <mxPoint x="650" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eEliminarRepo" edge="1" parent="1" source="eliminar" style="endArrow=open;endSize=10;html=1;rounded=1;strokeColor=#6B63C9;fontSize=9;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="irepo" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eConfigCambiar" edge="1" parent="1" source="config" style="endArrow=open;endSize=10;html=1;rounded=1;dashed=1;strokeColor=#8A8A8A;fontSize=9;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="cambiar" value="crea e inyecta">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="990" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

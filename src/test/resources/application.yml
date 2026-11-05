@@ -1,0 +1,21 @@
+# Configuración para las pruebas: reemplaza a src/main/resources/application.yml.
+# Usa H2 en memoria en modo PostgreSQL, así las pruebas no necesitan una base de datos instalada.
+spring:
+  application:
+    name: producto-service
+
+  datasource:
+    url: jdbc:h2:mem:topicos_db;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      # Flyway crea el esquema; Hibernate solo verifica que la entidad coincida con la tabla
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
